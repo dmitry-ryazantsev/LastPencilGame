@@ -9,7 +9,7 @@ class TooManyPencilsTaken(Exception):
 def ask_number_of_pencils():
     while True:
         try:
-            pencils = int(input("How many pencils would you like to use:"))
+            pencils = int(input("How many pencils would you like to use:\n"))
             if pencils <= 0:
                 print("The number of pencils should be positive.")
             else:
@@ -20,7 +20,7 @@ def ask_number_of_pencils():
 
 def determine_first_player():
     while True:
-        first_player = input(f"Who will be the first ({player}, {bot}):")
+        first_player = input(f"Who will be the first ({player}, {bot}):\n")
         if first_player.lower() in (player.lower(), bot.lower()):
             return first_player.capitalize()
         else:
@@ -85,7 +85,7 @@ def determine_the_winner(player, bot, current_player):
 
 if __name__ == "__main__":
     player = "John"
-    bot = "Bot"
+    bot = "Bender"
 
     pencils = ask_number_of_pencils()
     current_player = determine_first_player()
