@@ -87,7 +87,10 @@ if __name__ == "__main__":
     player = "John"
     bot = "Bender"
 
-    pencils = ask_number_of_pencils()
-    current_player = determine_first_player()
-    current_player = play_game(pencils, current_player)
-    determine_the_winner(player, bot, current_player)
+    try:
+        pencils = ask_number_of_pencils()
+        current_player = determine_first_player()
+        current_player = play_game(pencils, current_player)
+        determine_the_winner(player, bot, current_player)
+    except KeyboardInterrupt:
+        print("The game session has been interrupted.")
